@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, type CSSProperties } from "react";
+import { useEffect, useRef, useState, type CSSProperties } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import ThemeToggle from "@/components/ThemeToggle";
@@ -27,6 +27,7 @@ export default function ChapterReader({
   const router = useRouter();
   const saveTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const storageKey = `scrollpos:${chapterId}`;
+  const [showTop, setShowTop] = useState(false);
 
   // Restore reading position (as a fraction of scroll height, since strip
   // pixel heights can shift slightly between runs of the prep script).
@@ -58,6 +59,17 @@ export default function ChapterReader({
       if (saveTimer.current) clearTimeout(saveTimer.current);
     };
   }, [storageKey]);
+
+  useEffect(() => {
+    function onScroll() {
+      setShowTop((prev) => {
+        const next = window.scrollY > 400;
+        return prev === next ? prev : next;
+      });
+    }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   useEffect(() => {
     function onKeyDown(e: KeyboardEvent) {
@@ -93,6 +105,15 @@ export default function ChapterReader({
         ))}
       </div>
       <NavBar chapterId={chapterId} prevId={prevId} nextId={nextId} />
+      {showTop && (
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          aria-label="Scroll to top"
+          style={scrollTopStyle}
+        >
+          ↑
+        </button>
+      )}
     </div>
   );
 }
@@ -160,4 +181,20 @@ const disabledStyle: CSSProperties = {
   ...navLinkStyle,
   color: "var(--muted)",
   opacity: 0.5,
+};
+
+const scrollTopStyle: CSSProperties = {
+  position: "fixed",
+  bottom: "1.5rem",
+  right: "1.5rem",
+  zIndex: 20,
+  width: 44,
+  height: 44,
+  borderRadius: 999,
+  border: "1px solid var(--border)",
+  background: "var(--background)",
+  color: "var(--foreground)",
+  fontSize: "1.1rem",
+  cursor: "pointer",
+  boxShadow: "0 2px 8px rgba(0, 0, 0, 0.2)",
 };
