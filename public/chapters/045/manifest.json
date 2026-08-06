@@ -1,0 +1,20 @@
+{
+  "id": "045",
+  "images": [
+    {
+      "file": "001.jpg",
+      "width": 1100,
+      "height": 16500
+    },
+    {
+      "file": "002.jpg",
+      "width": 1100,
+      "height": 15444
+    },
+    {
+      "file": "003.jpg",
+      "width": 1100,
+      "height": 6722
+    }
+  ]
+}
