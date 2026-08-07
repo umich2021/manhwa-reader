@@ -4,7 +4,67 @@
     {
       "file": "001.jpg",
       "width": 1100,
+      "height": 16466
+    },
+    {
+      "file": "002.jpg",
+      "width": 1100,
+      "height": 15162
+    },
+    {
+      "file": "003.jpg",
+      "width": 1100,
+      "height": 8526
+    },
+    {
+      "file": "004.jpg",
+      "width": 1100,
+      "height": 9079
+    },
+    {
+      "file": "005.jpg",
+      "width": 1100,
+      "height": 15978
+    },
+    {
+      "file": "006.jpg",
+      "width": 1100,
+      "height": 9940
+    },
+    {
+      "file": "007.jpg",
+      "width": 1100,
+      "height": 10495
+    },
+    {
+      "file": "008.jpg",
+      "width": 1100,
       "height": 7740
+    },
+    {
+      "file": "009.jpg",
+      "width": 1100,
+      "height": 11518
+    },
+    {
+      "file": "010.jpg",
+      "width": 1100,
+      "height": 16015
+    },
+    {
+      "file": "011.jpg",
+      "width": 1100,
+      "height": 9279
+    },
+    {
+      "file": "012.jpg",
+      "width": 1100,
+      "height": 10287
+    },
+    {
+      "file": "013.jpg",
+      "width": 1100,
+      "height": 5526
     }
   ]
 }

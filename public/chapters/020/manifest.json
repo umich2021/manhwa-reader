@@ -1,0 +1,55 @@
+{
+  "id": "020",
+  "images": [
+    {
+      "file": "001.jpg",
+      "width": 1100,
+      "height": 13305
+    },
+    {
+      "file": "002.jpg",
+      "width": 1100,
+      "height": 14237
+    },
+    {
+      "file": "003.jpg",
+      "width": 1100,
+      "height": 13205
+    },
+    {
+      "file": "004.jpg",
+      "width": 1100,
+      "height": 15400
+    },
+    {
+      "file": "005.jpg",
+      "width": 1100,
+      "height": 12665
+    },
+    {
+      "file": "006.jpg",
+      "width": 1100,
+      "height": 13075
+    },
+    {
+      "file": "007.jpg",
+      "width": 1100,
+      "height": 14850
+    },
+    {
+      "file": "008.jpg",
+      "width": 1100,
+      "height": 13259
+    },
+    {
+      "file": "009.jpg",
+      "width": 1100,
+      "height": 12650
+    },
+    {
+      "file": "010.jpg",
+      "width": 1100,
+      "height": 13750
+    }
+  ]
+}
