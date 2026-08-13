@@ -1,5 +1,5 @@
 // One-time (rerun-when-chapters-change) image prep: reads the raw publisher
-// strips from KO2EN-20260304T111341Z-3-001/KO2EN/files/<chapter>/JPG/*.jpg,
+// strips from MyCatIsAVegtarianCHRAW/KO2EN/files/<chapter>/JPG/*.jpg,
 // sorts them into reading order, compresses them, and writes the result plus
 // manifests into public/chapters/ for the Next.js app to serve.
 //
@@ -12,12 +12,7 @@ import sharp from "sharp";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
-const SRC_ROOT = path.join(
-  ROOT,
-  "KO2EN-20260304T111341Z-3-001",
-  "KO2EN",
-  "files"
-);
+const SRC_ROOT = path.join(ROOT, "MyCatIsAVegtarianCHRAW", "KO2EN", "files");
 const OUT_ROOT = path.join(ROOT, "public", "chapters");
 
 const TARGET_WIDTH = 1100;

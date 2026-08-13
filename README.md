@@ -7,9 +7,10 @@ A password-gated reader for chapters delivered as tall scroll-format JPG strips.
 No code changes needed — this is a data operation.
 
 1. Drop the new chapter folder(s) into
-   `KO2EN-20260304T111341Z-3-001/KO2EN/files/<chapter>/JPG/*.jpg`, following the same layout
+   `MyCatIsAVegtarianCHRAW/KO2EN/files/<chapter>/JPG/*.jpg`, following the same layout
    as the existing chapters, e.g. `files/001/JPG/001_001.jpg`, `files/002/JPG/002_001.jpg`.
-   (This folder is not committed to git — see `.gitignore`.)
+   (PSD sources and misc extras in this folder are not committed to git — see
+   `.gitignore` — but the JPG strips are tracked as a lightweight backup.)
 2. Regenerate the compressed copies the app actually serves:
 
    ```
@@ -23,8 +24,8 @@ No code changes needed — this is a data operation.
    `036_011.jpg`) still sort correctly.
 3. Refresh `npm run dev` locally to see the new chapters — no restart needed.
 4. If this is already deployed, commit the updated `public/chapters/` output and push (see
-   Deploying below) — that's what actually ships. The raw `KO2EN-...` source folder is
-   gitignored and never deployed.
+   Deploying below) — that's what actually ships. The raw `MyCatIsAVegtarianCHRAW` source
+   folder is never deployed (only its JPG strips are tracked in git, as a backup).
 
 ## Local development
 

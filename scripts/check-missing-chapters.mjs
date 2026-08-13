@@ -13,12 +13,7 @@ import { fileURLToPath } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
-const SRC_ROOT = path.join(
-  ROOT,
-  "KO2EN-20260304T111341Z-3-001",
-  "KO2EN",
-  "files"
-);
+const SRC_ROOT = path.join(ROOT, "MyCatIsAVegtarianCHRAW", "KO2EN", "files");
 const REPORT_PATH = path.join(__dirname, "missing-report.txt");
 
 // Most complete chapters in this series top out around 10 strips, so a
